@@ -53,6 +53,6 @@ export default class CarProvider extends Component {
     }
 }
 
-const CarsConsumer = CarContext.Consumer;
+const CarConsumer = CarContext.Consumer;
 
-export{ CarProvider,CarsConsumer,CarContext };
+export{ CarProvider,CarConsumer,CarContext };
