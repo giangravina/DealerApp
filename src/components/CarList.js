@@ -1,12 +1,23 @@
-import React from 'react'
-import Room from './Car'
+import React from 'react';
+import Room from './Car';
 
-export default function CarList() {
-    return (
-        <div>
-            hello from car list
+export default function CarList({rooms}) {
+    if(rooms.length === 0) {
+        return (
+            <div class="empty-search">
+                <h3>unfortunately no cars matched your search parameters</h3>
+            </div>
+        )
+    }
+    return <section className="roomslist">
+        <div className="roomslist-center">
+            {
+                rooms.map(item=> {
+                    return <Room key={item.id} room={item} />;
+                })
+            }
         </div>
-    )
+    </section>
 }
 
 // export default function CarList({rooms}) {
