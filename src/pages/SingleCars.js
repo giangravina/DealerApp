@@ -26,17 +26,17 @@ export default class SingleCars extends Component {
         console.log(room);
         if(!room){
             return <div className="error">
-                <h3>no such room could be found...</h3>
+                <h3>no such car could be found...</h3>
                 <Link to="/cars" className="btn-primary">
-                    back to rooms
+                    back to gallery
                 </Link>
             </div>
         }
         const {
             name,
             description,
-            capacity,
-            size,
+            horsepower,
+            cylinders,
             price,
             extras,
             breakfast,
@@ -46,8 +46,8 @@ export default class SingleCars extends Component {
         return (
             <>
             <StyledHero img={images[0] || this.state.defaultBcg}>
-                <Banner title={`${name} room`}>
-                    <Link to='/cars' className="btn-primary">rooms</Link>
+                <Banner title={`${name}`}>
+                    <Link to='/cars' className="btn-primary">Return to gallery</Link>
                 </Banner>
             </StyledHero>
             <section className="single-room">
@@ -64,12 +64,8 @@ export default class SingleCars extends Component {
                     <article className="info">
                         <h3>info</h3>
                         <h6>price : ${price}</h6>
-                        <h6>size : {size} SQFT</h6>
-                        <h6>
-                            max capacity : {""}
-                            {capacity > 1 ? `${capacity} people`:
-                            `$ ${capacity} person `}
-                        </h6>
+                        <h6>Cylinders : {cylinders}</h6>
+                        <h6>Horsepower : {horsepower}</h6>
                         <h6>{pets?"pets allowed":"no pets allowed"}</h6>
                         <h6>{breakfast && "free breakfast included"}</h6>
                     </article>
