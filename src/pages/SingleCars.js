@@ -65,7 +65,7 @@ export default class SingleCars extends Component {
                         <h3>info</h3>
                         <h6>price : ${price}</h6>
                         <h6>Cylinders : {cylinders}</h6>
-                        <h6>Horsepower : {horsepower}</h6>
+                        <h6>Horsepower : {horsepower} hp</h6>
                         <h6>{manual?"manual transmission":"automatic transmission"}</h6>
                         <h6>{warranty?"under manufacturer warranty":"extended warranty available"}</h6>
                     </article>

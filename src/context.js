@@ -13,7 +13,7 @@ export default class CarProvider extends Component {
         type:'all',
         cylinders:4,
         price:0,
-        minPrice:0,
+        minPrice:15000,
         maxPrice:0,
         minHorsepower:0,
         coupe:false,

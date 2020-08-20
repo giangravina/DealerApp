@@ -146,6 +146,7 @@ export default [
       cylinders: 4,
       manual: true,
       coupe: true,
+      warranty: false,
       featured: true,
       description:
         "With a fuel consumption of 8.3 litres/100km - 34 mpg UK - 28 mpg US (Average), 0 to 100 km/h (62mph) in 6.7 seconds, a maximum top speed of 146 mph (235 km/h), a curb weight of 2568 lbs (1165 kgs), the E30 3 Series M3 has a naturally-aspirated Inline 4 cylinder engine, Petrol motor, with the engine code S14B23.",
@@ -199,10 +200,11 @@ export default [
       slug: "bmw-m5",
       type: "Sports Sedan",
       price: 20000,
-      size: 500,
+      horsepower: 412,
       cylinders: 8,
       manual: true,
       coupe: false,
+      warranty: true,
       featured: true,
       description:
         "With a fuel consumption of 8.3 litres/100km - 34 mpg UK - 28 mpg US (Average), 0 to 100 km/h (62mph) in 6.7 seconds, a maximum top speed of 146 mph (235 km/h), a curb weight of 2568 lbs (1165 kgs), the E30 3 Series M3 has a naturally-aspirated Inline 4 cylinder engine, Petrol motor, with the engine code S14B23.",
