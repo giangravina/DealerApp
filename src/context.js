@@ -15,7 +15,7 @@ export default class CarProvider extends Component {
         price:0,
         minPrice:0,
         maxPrice:0,
-        minSize:0,
+        minHorsepower:0,
         coupe:false,
         manual:false
 
@@ -28,8 +28,8 @@ export default class CarProvider extends Component {
         let featuredRooms = rooms.filter(room => room.featured === true);
         let maxPrice = Math.max(...rooms.map(item => 
         item.price))
-        let maxSize = Math.max(...rooms.map(item => 
-            item.size))
+        let maxHorsepower = Math.max(...rooms.map(item => 
+            item.horsepower))
         this.setState({
             rooms,
             featuredRooms,
@@ -37,7 +37,7 @@ export default class CarProvider extends Component {
             loading: false,
             price:maxPrice,
             maxPrice,
-            maxSize
+            maxHorsepower
         });
 
         }
@@ -70,7 +70,7 @@ export default class CarProvider extends Component {
     };
     filterRooms = () => {
         let{
-            rooms, type, cylinders, price, minSize, maxSize, coupe, manual
+            rooms, type, cylinders, price, minHorsepower, maxHorsepower, coupe, manual
         } = this.state
         //  all the rooms
         let tempRooms = [...rooms];
@@ -86,14 +86,14 @@ export default class CarProvider extends Component {
         }
         //  filter by price
         tempRooms = tempRooms.filter(room => room.price <= price);
-        //  filter by size
-        tempRooms = tempRooms.filter(room => room.size >= minSize && 
-            room.size <= maxSize);
-        //  filter by breakfast
+        //  filter by horsepower
+        tempRooms = tempRooms.filter(room => room.horsepower >= minHorsepower && 
+            room.horsepower <= maxHorsepower);
+        //  filter by coupe
         if(coupe){
             tempRooms = tempRooms.filter(room => room.coupe === true);
         }
-        //  filter by pets
+        //  filter by manual
         if(manual){
             tempRooms = tempRooms.filter(room => room.manual === true);
         }

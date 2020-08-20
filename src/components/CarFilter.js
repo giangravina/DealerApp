@@ -16,8 +16,8 @@ export default function CarFilter({ rooms }) {
             price,
             minPrice,
             maxPrice,
-            minSize,
-            maxSize,
+            minHorsepower,
+            maxHorsepower,
             coupe,
             manual
         } = context; 
@@ -75,19 +75,19 @@ export default function CarFilter({ rooms }) {
                     id="price" value={price} onChange={handleChange} className="form-control"/>
                 </div>
                 {/* end of car price */}
-                {/* size */}
+                {/* horsepower */}
                 <div className="form-group">
-                    <label htmlFor="size">room size</label>
-                    <div className="size-inputs">
-                        <input type="number" name="minSize" id="size" 
-                        value={minSize} onChange={handleChange}
-                        className="size-input"/>
-                        <input type="number" name="maxSize" id="size" 
-                        value={maxSize} onChange={handleChange}
-                        className="size-input"/>
+                    <label htmlFor="horsepower">horsepower</label>
+                    <div className="horsepower-inputs">
+                        <input type="number" name="minHorsepower" id="horsepower" 
+                        value={minHorsepower} onChange={handleChange}
+                        className="horsepower-input"/>
+                        <input type="number" name="maxHorsepower" id="horsepower" 
+                        value={maxHorsepower} onChange={handleChange}
+                        className="horsepower-input"/>
                     </div>
                 </div>
-                {/* end of size */}
+                {/* end of horsepower */}
                 {/* extras */}
                 <div className="form-group">
                     <div className="single-extra">
