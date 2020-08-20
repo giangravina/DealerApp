@@ -11,13 +11,13 @@ export default class CarProvider extends Component {
         featuredRooms: [],
         loading: true,
         type:'all',
-        capacity:1,
+        cylinders:4,
         price:0,
         minPrice:0,
         maxPrice:0,
         minSize:0,
-        breakfast:false,
-        pets:false
+        coupe:false,
+        manual:false
 
     };
     //getData
@@ -60,14 +60,48 @@ export default class CarProvider extends Component {
         return room;
     };
     handleChange = event => {
-        const type = event.target.type
-        const name = event.target.name
-        const value = event.target.value
-        console.log(type,name,value);
-    }
+        const target = event.target
+        const value = target.type === 'checkbox' ?
+        target.checked:target.value
+        const name = event.target.name;
+        this.setState({
+            [name]:value
+        },this.filterRooms)
+    };
     filterRooms = () => {
-        console.log('hello');
-    }
+        let{
+            rooms, type, cylinders, price, minSize, maxSize, coupe, manual
+        } = this.state
+        //  all the rooms
+        let tempRooms = [...rooms];
+        //  transform values
+        cylinders = parseInt(cylinders)
+        //  filter by type
+        if(type !== 'all'){
+            tempRooms = tempRooms.filter(room => room.type === type)
+        }
+        //  filter by capacity
+        if(cylinders !==5){
+            tempRooms = tempRooms.filter(room => room.cylinders >= cylinders);
+        }
+        //  filter by price
+        tempRooms = tempRooms.filter(room => room.price <= price);
+        //  filter by size
+        tempRooms = tempRooms.filter(room => room.size >= minSize && 
+            room.size <= maxSize);
+        //  filter by breakfast
+        if(coupe){
+            tempRooms = tempRooms.filter(room => room.coupe === true);
+        }
+        //  filter by pets
+        if(manual){
+            tempRooms = tempRooms.filter(room => room.manual === true);
+        }
+        //  change state
+        this.setState({
+            sortedRooms:tempRooms
+        });
+    };
 
 
 

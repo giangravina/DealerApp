@@ -4,7 +4,7 @@ import Loading from './Loading';
 import Car from './Car';
 import Title from './Title';
 
-export default class FeaturedRooms extends Component {
+export default class FeaturedCars extends Component {
     static contextType = CarContext;
     render() {
         let { loading, featuredRooms: rooms } = 

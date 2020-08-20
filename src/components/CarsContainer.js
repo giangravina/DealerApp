@@ -11,7 +11,6 @@ if(loading){
                     }
                     return  (
                     <>
-                        hello from cars container
                         <CarFilter rooms={rooms}/>
                         <CarList rooms={sortedRooms} />
                     </>
