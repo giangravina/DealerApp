@@ -7,7 +7,7 @@ const getUnique = (items,value)=>{
     return [...new Set(items.map(item => item[value]))]
 }
 
-export default function CarFilter() {
+export default function CarFilter({ rooms }) {
         const context = useContext (CarContext);
         const {
             handleChange,
