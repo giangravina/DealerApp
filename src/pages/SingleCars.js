@@ -39,8 +39,8 @@ export default class SingleCars extends Component {
             cylinders,
             price,
             extras,
-            breakfast,
-            pets,
+            warranty,
+            manual,
             images
         } = room;
         return (
@@ -66,8 +66,8 @@ export default class SingleCars extends Component {
                         <h6>price : ${price}</h6>
                         <h6>Cylinders : {cylinders}</h6>
                         <h6>Horsepower : {horsepower}</h6>
-                        <h6>{pets?"pets allowed":"no pets allowed"}</h6>
-                        <h6>{breakfast && "free breakfast included"}</h6>
+                        <h6>{manual?"manual transmission":"automatic transmission"}</h6>
+                        <h6>{warranty?"under manufacturer warranty":"extended warranty available"}</h6>
                     </article>
                 </div>
             </section>
