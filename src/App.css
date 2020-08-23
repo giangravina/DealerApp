@@ -19,7 +19,7 @@
 body {
   padding-top: 66px;
   color: var(--mainBlack);
-  background: var(--mainWhite);
+  background: black;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   line-height: 1.4;
 }
@@ -94,7 +94,7 @@ h6 {
   left: 0;
   width: 100%;
   padding: 0.75rem 2rem;
-  background: var(--offWhite);
+  background: black;
   z-index: 1;
 }
 .nav-header {
@@ -121,7 +121,7 @@ h6 {
   display: block;
   text-decoration: none;
   padding: 1rem 0;
-  color: var(--mainBlack);
+  color: white;
   transition: var(--mainTransition);
   text-align: center;
   font-size: 1rem;
@@ -129,7 +129,7 @@ h6 {
   letter-spacing: var(--mainSpacing);
 }
 .nav-links a:hover {
-  color: var(--primaryColor);
+  color: var(--primaryC olor);
 }
 
 .show-nav {
@@ -275,6 +275,10 @@ h6 {
 
 .featured-rooms {
   padding: 5rem 0;
+  background: black;
+}
+.featured-rooms .section-title {
+  color: white !important;
 }
 .featured-rooms-center {
   width: 80vw;
