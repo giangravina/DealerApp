@@ -9,22 +9,22 @@ state={
         {
             icon:<FaCar/>,
             title:"Fully Serviced Vehicles",
-            info:"Lorem ipsum dolor sit amet, eu euismod interpretaris per, ei stet eros quo. "
+            info:"Have the confidence directly off the lot. All of our vehicles are fully-serviced inside and out. "
         },
         {
             icon:<FaWrench/>,
             title:"Discounted Repairs",
-            info:"Lorem ipsum dolor sit amet, eu euismod interpretaris per, ei stet eros quo. "
+            info:"Enjoy our 10% discounted repairs performed by our train master technicians. "
         },
         {
             icon:<FaShuttleVan/>,
             title:"Complementary Roadside Assistance",
-            info:"Lorem ipsum dolor sit amet, eu euismod interpretaris per, ei stet eros quo. "
+            info:"Car not running as it's supposed to? Give us a call for complimentary roadside assistance. "
         },
         {
             icon:<FaShippingFast/>,
             title:"Free Shipping Across USA",
-            info:"Lorem ipsum dolor sit amet, eu euismod interpretaris per, ei stet eros quo. "
+            info:"We'll deliver your vehicle directly to your footsteps across all states. "
         }
     ]
 };

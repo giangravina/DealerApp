@@ -19,7 +19,7 @@
 body {
   padding-top: 66px;
   color: var(--mainBlack);
-  background: black;
+  background: var(--offWhite);
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   line-height: 1.4;
 }
@@ -94,7 +94,7 @@ h6 {
   left: 0;
   width: 100%;
   padding: 0.75rem 2rem;
-  background: black;
+  background: var(--offWhite);;
   z-index: 1;
 }
 .nav-header {
@@ -121,7 +121,7 @@ h6 {
   display: block;
   text-decoration: none;
   padding: 1rem 0;
-  color: white;
+  color: black;
   transition: var(--mainTransition);
   text-align: center;
   font-size: 1rem;
@@ -159,7 +159,7 @@ h6 {
 .defaultHero,
 .roomsHero {
   min-height: calc(100vh - 66px);
-  background: url("./images/corvette.jpg") center/cover no-repeat;
+  background: url("./images/auto_hero.jpg") center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -275,10 +275,10 @@ h6 {
 
 .featured-rooms {
   padding: 5rem 0;
-  background: black;
+  background:  var(--offWhite);
 }
 .featured-rooms .section-title {
-  color: white !important;
+  color: black !important;
 }
 .featured-rooms-center {
   width: 80vw;
