@@ -40,7 +40,7 @@ export default function CarFilter({ rooms }) {
 
         return ( 
             <section className="filter-container">
-            <Title title="search rooms" />
+            <Title title="search vehicles" />
             <form className="filter-form">
                 {/*select type */}
                 <div className="form-group">
